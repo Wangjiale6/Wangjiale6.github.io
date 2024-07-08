@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
   </entry>
   <entry>
     <title>HTML知识点</title>
@@ -36,6 +39,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
       <tags>
         <tag>HTML</tag>
       </tags>
@@ -118,8 +124,12 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#### 没有使用反斜杠，这是4级标题</span><br><span class="line">\#### 使用反斜杠，这就是4个#号</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>MarkDown</category>
+      </categories>
       <tags>
-        <tag>MarkDown Typora</tag>
+        <tag>MarkDown</tag>
+        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -127,9 +137,14 @@
     <url>/2024/03/30/Vue%E6%96%87%E6%A1%A3%E9%A3%8E%E6%A0%BC%E7%9A%84Typora%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<p><a href="https://github.com/blinkfox/typora-vue-theme">typora-vue-theme</a> 是 Typora Markdown 文档编辑器中一款类似<a href="https://vuejs.org/">Vue</a>文档风格的主题。</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="https://www.typora.io/">Typora</a>是一款支持实时预览的 Markdown 编辑器和阅读器，支持<code>Windows</code>、<code>macOS</code>、<code>Linux</code>三大平台。Typora 作为一款合格的 Markdown 编辑器，支持图片、列表、表格、代码、公式、目录等功能，同时这款软件还支持（一键）动态预览功能，让一切都变得如此干净、纯粹。并且有多种主题模板。**<a href="https://github.com/blinkfox/typora-vue-theme">typora-vue-theme</a>就是参考了<a href="https://vuejs.org/">Vue</a>文档风格而开发的一个 Typora 自定义主题**。</p>
+<p><font color="green">用起来还挺不错的</font>&gt;</p>
 ]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
       <tags>
-        <tag>Vue || Typora</tag>
+        <tag>Vue</tag>
+        <tag>Typora</tag>
       </tags>
   </entry>
 </search>
