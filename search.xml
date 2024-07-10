@@ -572,21 +572,20 @@
 <ul>
 <li><p>事件类型之鼠标事件：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">btn1.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;单击事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">btn2.<span class="property">ondblclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;双击事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">btn3.<span class="property">onmousedown</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标按下事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn4.<span class="property">onmouseup</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标抬起事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">btn5.<span class="property">onmousemove</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标移动经过事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn6.<span class="property">onmouseenter</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标进入事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn7.<span class="property">onmouseleave</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标离开事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">btn8.<span class="property">onmouseover</span>= <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标经过事件&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn9.<span class="property">onmouseout</span>= <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;鼠标离开事件&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
+</li>
 <li><p>Event事件：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn&quot;</span>);</span><br><span class="line"></span><br><span class="line">        btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">target</span>); <span class="comment">//target--直接打印标签--可以直接修改元素</span></span><br><span class="line">            <span class="comment">// event.target.innerHTML = &quot;点击之后&quot;</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">type</span>); <span class="comment">// click  -- click事件</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
+  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn&quot;</span>);</span><br><span class="line"></span><br><span class="line">        btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">target</span>); <span class="comment">//target--直接打印标签--可以直接修改元素</span></span><br><span class="line">            <span class="comment">// event.target.innerHTML = &quot;点击之后&quot;</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">type</span>); <span class="comment">// click  -- click事件</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>表单事件：</p>
-<p>​     <code>select</code> – 选中内容时触发事件</p>
-<p>​    <code>Change </code>– “回车” 或者 “失去交点” 的时候触发  跟input不同（password）</p>
-<p>​    <code>reset </code>–  重置表单 –触发在表单上  清空表单</p>
-<p>​     <code>submit </code>–  数据提交给服务器</p>
-</li>
-</ul>
-</li>
-</ul>
+<pre><code>     `select` -- 选中内容时触发事件
+
+​    `Change `-- “回车” 或者 “失去交点” 的时候触发  跟input不同（password）
+
+​    `reset `--  重置表单 --触发在表单上  清空表单
+</code></pre>
+<p>​    </p>
+<pre><code>     `submit `--  数据提交给服务器
+</code></pre>
 </li>
 </ul>
 <h3 id="14-定时器："><a href="#14-定时器：" class="headerlink" title="14.定时器："></a>14.定时器：</h3><ul>
