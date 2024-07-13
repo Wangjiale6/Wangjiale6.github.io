@@ -802,4 +802,27 @@
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Vue3新特性</title>
+    <url>/2024/04/10/Vue3%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<p><font color="red">Vue3 的一些常用新特性</font></p>
+<p>底层改成Ts,更支持Ts</p>
+<h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><h5 id="组合式API将原本的-data-、methods-等都换了一种方式"><a href="#组合式API将原本的-data-、methods-等都换了一种方式" class="headerlink" title="组合式API将原本的  data(){} 、methods:{} 等都换了一种方式"></a>组合式API将原本的  <code>data()&#123;&#125; </code>、<code>methods:&#123;&#125; </code>等都换了一种方式</h5><p><code>setup()</code>–组合式API</p>
+<ul>
+<li><p>会给 <code>ref</code> 或者 <code>reactive</code> 有点代替 <code>data</code> 的意思:</p>
+</li>
+<li><p><code>reactive</code> 一般声明对象、  –列表等</p>
+<p>必须先引入然后在 setup中 ref 声明</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template</span></span><br><span class="line">&lt;p&gt; &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// import &#123; ref &#125; from &quot;vue&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; ref ,reactive &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">//ref</span></span><br><span class="line">        <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            message</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 组合式 API</span></span><br><span class="line"><span class="title function_">setup</span>(<span class="params">props, context</span>)&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// setup 中没有this 关键字</span></span><br><span class="line">  <span class="comment">// console.log(this); //undefined   ------------------</span></span><br><span class="line">  <span class="comment">// ---改用了setup(props, context)  context简写成 ctx  ---------------</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(context);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// console.log(props.msg);</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ref  先引入(用到那个打包那个)</span></span><br><span class="line">  <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// reactive  声明数组类型或者复杂一点的数据</span></span><br><span class="line">  <span class="keyword">const</span> names = <span class="title function_">reactive</span>(&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">list</span>:[<span class="string">&quot;iwen&quot;</span>,<span class="string">&quot;ime&quot;</span>,<span class="string">&quot;frank&quot;</span>],</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="comment">// methods 方法写入组合API setup当中</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">clickHandle</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;点击了&quot;</span>);</span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 通过 message 的 value 来修改消息</span></span><br><span class="line">    message.<span class="property">value</span> = <span class="string">&quot;我是新的消息&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// props 显示</span></span><br><span class="line">  <span class="keyword">const</span> msg=props.<span class="property">msg</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    message,</span><br><span class="line">    names,</span><br><span class="line">    clickHandle,</span><br><span class="line">    msg</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue3</tag>
+      </tags>
+  </entry>
 </search>
