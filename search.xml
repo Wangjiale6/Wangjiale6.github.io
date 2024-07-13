@@ -806,7 +806,7 @@
   </entry>
   <entry>
     <title>Vue3新特性</title>
-    <url>/2024/07/13/Vue3%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+    <url>/2024/04/10/Vue3%E6%96%B0%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<p><font color="red">Vue3 的一些常用新特性</font></p>
 <p>底层改成Ts,更支持Ts</p>
 <h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><p><em><strong>组合式API将原本的  <code>data()&#123;&#125; </code>、<code>methods:&#123;&#125; </code>等都换了一种方式</strong></em></p>
