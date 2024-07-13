@@ -612,8 +612,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue3回顾</title>
-    <url>/2024/04/03/Vue3%E5%9B%9E%E9%A1%BE/</url>
+    <title>Vue3-回顾</title>
+    <url>/2024/04/05/Vue3%E5%9B%9E%E9%A1%BE/</url>
     <content><![CDATA[<p><font color="green">Vue 语法知识点自我回顾及代码</font></p>
 <h3 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h3><p><code>&#123;&#123;花括号&#125;&#125;</code>的使用</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">  &lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    <span class="attr">msg</span>:<span class="string">&#x27;hello world&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -631,7 +631,7 @@
 <h3 id="监听事件"><a href="#监听事件" class="headerlink" title="监听事件"></a>监听事件</h3><p><code>V-on</code>指令 通常缩写为<code>@</code> 来监听DOM事件，触发时执行JavaScript，</p>
 <p>用法为 <code>V-on click = &quot;methodName&quot;</code>或者快捷方式 <code>@click = &quot;methodName&quot;</code></p>
 <p>点击事件、失去焦点等等：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter+=1&quot;</span>&gt;</span>v-on 点击:&#123;&#123; counter &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- v-on 缩写成 @ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter1+=1&quot;</span>&gt;</span>@ 点击:&#123;&#123; counter1 &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;clickHander&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;say(&#x27;hi&#x27;)&quot;</span> &gt;</span>say hi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;say(&#x27;what&#x27;)&quot;</span> &gt;</span>say what<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    // 事件传递参数  li标签内传参</span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> @<span class="attr">click</span>=<span class="string">&quot;clickItemHander(item)&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in names&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; item &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter+=1&quot;</span>&gt;</span>v-on 点击:&#123;&#123; counter &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- v-on 缩写成 @ --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter1+=1&quot;</span>&gt;</span>@ 点击:&#123;&#123; counter1 &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;clickHander&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;say(&#x27;hi&#x27;)&quot;</span> &gt;</span>say hi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;say(&#x27;what&#x27;)&quot;</span> &gt;</span>say what<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    // 事件传递参数  li标签内传参</span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> @<span class="attr">click</span>=<span class="string">&quot;clickItemHander(item)&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in names&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; item &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -663,8 +663,10 @@
 <li><p>挂载组件：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="attr">components</span>:&#123;</span><br><span class="line">    <span class="title class_">MyComponent</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>显示组件(两种写法)：<template>中 写入  <code>&lt;my-component /&gt;</code></p>
-<p>​															写入  <code>&lt;MyComponent /&gt;</code></p>
+<li><p>显示组件(两种写法)：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span>中 写入  `<span class="tag">&lt;<span class="name">my-component</span> /&gt;</span>`</span><br><span class="line">    或者 写入  `<span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>`</span><br></pre></td></tr></table></figure>
+
+<p>​				</p>
 <p><code>scoped</code>: 如果在style中添加此属性，就代表着，当前样式，只在当前组件中生效</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;!-- scoped: 如果在style中添加此属性，就代表着，当前样式，只在当前组件中生效 --&gt;</span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">h3&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -776,7 +778,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save vuex</span><br></pre></td></tr></table></figure>
 
 <p>2src目录下创建 <code>store</code> 再其目录下创建<code>index.js</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 创建仓库再导出</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Vuex 的核心作用是帮我们管理组件之间的状态</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">createStore</span>(&#123;</span><br><span class="line">    <span class="comment">// 所有的状态都放在这里（数据）</span></span><br><span class="line">  <span class="attr">state</span>: &#123;</span><br><span class="line">      <span class="attr">counter</span>:<span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建仓库再导出</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Vuex 的核心作用是帮我们管理组件之间的状态</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">createStore</span>(&#123;</span><br><span class="line">    <span class="comment">// 所有的状态都放在这里（数据）</span></span><br><span class="line">  <span class="attr">state</span>: &#123;</span><br><span class="line">      <span class="attr">counter</span>:<span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>3在主文件引入</p>
 <p>4组件中使用(  –两种方法 – )：</p>
@@ -804,25 +806,111 @@
   </entry>
   <entry>
     <title>Vue3新特性</title>
-    <url>/2024/04/10/Vue3%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+    <url>/2024/07/13/Vue3%E6%96%B0%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<p><font color="red">Vue3 的一些常用新特性</font></p>
 <p>底层改成Ts,更支持Ts</p>
-<h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><h5 id="组合式API将原本的-data-、methods-等都换了一种方式"><a href="#组合式API将原本的-data-、methods-等都换了一种方式" class="headerlink" title="组合式API将原本的  data(){} 、methods:{} 等都换了一种方式"></a>组合式API将原本的  <code>data()&#123;&#125; </code>、<code>methods:&#123;&#125; </code>等都换了一种方式</h5><p><code>setup()</code>–组合式API</p>
+<h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><p><em><strong>组合式API将原本的  <code>data()&#123;&#125; </code>、<code>methods:&#123;&#125; </code>等都换了一种方式</strong></em></p>
+<p><code>setup()</code>–组合式API</p>
 <ul>
 <li><p>会给 <code>ref</code> 或者 <code>reactive</code> 有点代替 <code>data</code> 的意思:</p>
 </li>
 <li><p><code>reactive</code> 一般声明对象、  –列表等</p>
 <p>必须先引入然后在 setup中 ref 声明</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template</span></span><br><span class="line">&lt;p&gt; &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// import &#123; ref &#125; from &quot;vue&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; ref ,reactive &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">//ref</span></span><br><span class="line">        <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            message</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 组合式 API</span></span><br><span class="line"><span class="title function_">setup</span>(<span class="params">props, context</span>)&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// setup 中没有this 关键字</span></span><br><span class="line">  <span class="comment">// console.log(this); //undefined   ------------------</span></span><br><span class="line">  <span class="comment">// ---改用了setup(props, context)  context简写成 ctx  ---------------</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(context);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// console.log(props.msg);</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ref  先引入(用到那个打包那个)</span></span><br><span class="line">  <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// reactive  声明数组类型或者复杂一点的数据</span></span><br><span class="line">  <span class="keyword">const</span> names = <span class="title function_">reactive</span>(&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">list</span>:[<span class="string">&quot;iwen&quot;</span>,<span class="string">&quot;ime&quot;</span>,<span class="string">&quot;frank&quot;</span>],</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="comment">// methods 方法写入组合API setup当中</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">clickHandle</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;点击了&quot;</span>);</span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 通过 message 的 value 来修改消息</span></span><br><span class="line">    message.<span class="property">value</span> = <span class="string">&quot;我是新的消息&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// props 显示</span></span><br><span class="line">  <span class="keyword">const</span> msg=props.<span class="property">msg</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    message,</span><br><span class="line">    names,</span><br><span class="line">    clickHandle,</span><br><span class="line">    msg</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template</span></span><br><span class="line">&lt;p&gt; &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// import &#123; ref &#125; from &quot;vue&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; ref ,reactive &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">//ref</span></span><br><span class="line">        <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            message</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+
+</li>
+<li><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 组合式 API</span></span><br><span class="line"><span class="title function_">setup</span>(<span class="params">props, context</span>)&#123;</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// setup 中没有this 关键字</span></span><br><span class="line">  <span class="comment">// console.log(this); //undefined   ------------------</span></span><br><span class="line">  <span class="comment">// ---改用了setup(props, context)  context简写成 ctx  ---------------</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(context);</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// console.log(props.msg);</span></span><br><span class="line">   </span><br><span class="line">  <span class="comment">// ref  先引入(用到那个打包那个)</span></span><br><span class="line">  <span class="keyword">const</span> message = <span class="title function_">ref</span>(<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// reactive  声明数组类型或者复杂一点的数据</span></span><br><span class="line">  <span class="keyword">const</span> names = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="attr">list</span>:[<span class="string">&quot;iwen&quot;</span>,<span class="string">&quot;ime&quot;</span>,<span class="string">&quot;frank&quot;</span>],</span><br><span class="line">   </span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">   </span><br><span class="line">  <span class="comment">// methods 方法写入组合API setup当中</span></span><br><span class="line">   </span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">clickHandle</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;点击了&quot;</span>);</span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 通过 message 的 value 来修改消息</span></span><br><span class="line">    message.<span class="property">value</span> = <span class="string">&quot;我是新的消息&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// props 显示</span></span><br><span class="line">  <span class="keyword">const</span> msg=props.<span class="property">msg</span></span><br><span class="line">   </span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    message,</span><br><span class="line">    names,</span><br><span class="line">    clickHandle,</span><br><span class="line">    msg</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+<li><p>setup中没有  this关键字</p>
+</li>
+<li><p><code>props</code>的使用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="attr">props</span>:&#123;</span><br><span class="line">	<span class="comment">// 只用设置类型</span></span><br><span class="line">	<span class="attr">msg</span>:<span class="title class_">String</span></span><br><span class="line">	&#125;,</span><br><span class="line"></span><br><span class="line">	<span class="title function_">setup</span>(<span class="params">props</span>)&#123;</span><br><span class="line">        <span class="comment">//这里拿到 msg</span></span><br><span class="line">		<span class="keyword">const</span> msg = props.<span class="property">msg</span></span><br><span class="line">	</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            msg, <span class="comment">//这里记得return出去  然后在template 使用</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>想要获取实例，只能用<code>context</code> 因为setup中没有<code>this</code>关键字</li>
+</ul>
+</li>
+</ul>
+<h3 id="生命周期函数"><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h3><ul>
+<li><p>在<code>setup</code>中使用生命周期函数—直接在钩子函数前面加上 <code>on</code></p>
+<p>创建时：beforeCreate、created<br></p>
+<p>渲染时：beforeMount、mounted<br></p>
+<p>更新时：beforeUpdate、updated<br></p>
+<p>卸载时：beforeUnmount、unmounted<br></p>
+</li>
+<li><p>渲染时：onBeforeMount、onMounted<br></p>
+<p>更新时：onBeforeUpdate、onUpdated<br></p>
+<p>卸载时：onBeforeUnmount、onUnmounted<br></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">setup</span>(<span class="params"></span>)&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 生命周期函数 在setup当中 要改写成  箭头函数</span></span><br><span class="line">  </span><br><span class="line">  <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// 比以前有优势， 以前的同一个生命周期函数只能存在一个，现在可以存在多个</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;生命周期函数:Mounted1&quot;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;生命周期函数:Mounted2&quot;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">      <span class="comment">// provide和 inject 父级传递给子级  -------------</span></span><br><span class="line">  <span class="keyword">const</span> message = <span class="title function_">inject</span>(<span class="string">&quot;message&quot;</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    message</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Provide-Inject"><a href="#Provide-Inject" class="headerlink" title="Provide &#x2F; Inject"></a>Provide &#x2F; Inject</h3><ul>
+<li><p><code>provide()</code>、<code>inject()</code> 可以实现嵌套组件之间的数据传递</p>
+</li>
+<li><p>这两个函数只能在<code>setup()</code>函数中使用</p>
+</li>
+<li><p>父组件使用<code>provide()</code>函数向下传递数据</p>
+</li>
+<li><p>子组件中使用<code>inject()</code>获取上层传递过来的数据</p>
+</li>
+<li><p>不限层级</p>
+</li>
+</ul>
+<p>使用方法 </p>
+<p>​	先引入 import { provide} from “vue”</p>
+<p>​	然后在 setup中使用</p>
+<p>传</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 父组件：</span></span><br><span class="line"><span class="title function_">setup</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">provide</span>(<span class="string">&quot;message&quot;</span>,<span class="string">&quot;我是消息&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//子组件</span></span><br><span class="line">setup&#123;</span><br><span class="line">    <span class="keyword">const</span> message = <span class="title function_">injest</span>(<span class="string">&quot;message&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//然后return出去 </span></span><br><span class="line">	<span class="keyword">return</span>&#123;</span><br><span class="line">    	message</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Vue-3-加载Element—plus"><a href="#Vue-3-加载Element—plus" class="headerlink" title="Vue 3 加载Element—plus"></a>Vue 3 加载Element—plus</h3><p>​	桌面组件库</p>
+<ul>
+<li>安装：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>引入：两种</p>
+<p>完整引入</p>
+<p>按需引入（最受青睐）</p>
+<ul>
+<li><p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>vue.config.js</code>配置文件—（复制一堆）</p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="Vue-3-加载Element-plus的字体图标"><a href="#Vue-3-加载Element-plus的字体图标" class="headerlink" title="Vue 3 加载Element-plus的字体图标"></a>Vue 3 加载Element-plus的字体图标</h3><ul>
+<li><p>安装<code>icons</code>字体图标</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install @element-plus/icons-vue</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局注册：根目录下，创建<code>plugins</code>文件夹，在文件夹下创建文件<code>icons.js</code>文件—（复制一坨）</p>
+</li>
+<li><p>引入文件： 在主文件<code>main.js</code>中引入<code>icon.js</code>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import elementIcon from &quot;./plugins/icons&quot;</span><br><span class="line">app.use(elementIcon)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用   ： 在组件中引入</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Vue</category>
       </categories>
       <tags>
-        <tag>Vue3</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
 </search>
