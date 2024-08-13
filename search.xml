@@ -937,7 +937,7 @@
       </tags>
   </entry>
   <entry>
-    <title>nvm、nrm的使用</title>
+    <title>nvm的使用</title>
     <url>/2024/06/14/nvm%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h4 id="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"><a href="#nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。" class="headerlink" title="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"></a>nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。</h4><ul>
 <li><p>下载地址： <a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
