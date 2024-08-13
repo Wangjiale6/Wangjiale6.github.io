@@ -916,7 +916,19 @@
   <entry>
     <title>Vite搭建项目</title>
     <url>/2024/06/13/Vite%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h3 id="创建Vue3-Vite的项目"><a href="#创建Vue3-Vite的项目" class="headerlink" title="创建Vue3+Vite的项目"></a>创建Vue3+Vite的项目</h3><p>要求： vite 需要 Node.js 版本 18+</p>
+<p>创建命令：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm create vite@lastest 项目名称 -- --template vue</span><br><span class="line"></span><br><span class="line"># yarn</span><br><span class="line">yarn create vite 项目名称 --template vue</span><br><span class="line"></span><br><span class="line"># pnpm</span><br><span class="line">pnpm create vite 项目名称 --template vue</span><br></pre></td></tr></table></figure>
+
+<p>下载依赖：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">#npm：</span><br><span class="line">npm i</span><br><span class="line"></span><br><span class="line"># yarn</span><br><span class="line">yarn</span><br></pre></td></tr></table></figure>
+
+<p>启动项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h5 id="后续安装-router、-element-plus-等依赖"><a href="#后续安装-router、-element-plus-等依赖" class="headerlink" title="后续安装 router、 element-plus 等依赖"></a>后续安装 router、 element-plus 等依赖</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install vue-router element-plus -s</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
         <category>Vite</category>
       </categories>
@@ -926,7 +938,7 @@
   </entry>
   <entry>
     <title>nvm、nrm的使用</title>
-    <url>/2024/08/13/nvm%E3%80%81nrm%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <url>/2024/06/14/nvm%E3%80%81nrm%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h4 id="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"><a href="#nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。" class="headerlink" title="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"></a>nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。</h4><ul>
 <li><p>下载地址： <a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
 </li>
