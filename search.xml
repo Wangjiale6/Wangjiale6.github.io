@@ -913,4 +913,54 @@
         <category>其他</category>
       </categories>
   </entry>
+  <entry>
+    <title>Vite搭建项目</title>
+    <url>/2024/06/13/Vite%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Vite</category>
+      </categories>
+      <tags>
+        <tag>Vite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nvm、nrm的使用</title>
+    <url>/2024/08/13/nvm%E3%80%81nrm%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"><a href="#nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。" class="headerlink" title="nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。"></a>nvm是一个node版本管理工具，可以快速切换、安装、查看node的版本。与npm不同的是，npm是依赖包的管理工具。</h4><ul>
+<li><p>下载地址： <a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+</li>
+<li><p>查看当前版本：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看所有版本：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载版本：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nvm install 版本号</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换版本：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nvm use 版本号</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="nrm-：npm的镜像源管理工具"><a href="#nrm-：npm的镜像源管理工具" class="headerlink" title="nrm ：npm的镜像源管理工具"></a>nrm ：npm的镜像源管理工具</h4><ul>
+<li><p>安装：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看可选择的源：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nrm use 对应的镜像</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>使用npm更加方便管理！</p>
+]]></content>
+      <categories>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+      </tags>
+  </entry>
 </search>
