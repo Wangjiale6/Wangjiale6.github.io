@@ -975,4 +975,79 @@
         <tag>nvm</tag>
       </tags>
   </entry>
+  <entry>
+    <title>调试排查项目问题使用nvm下载报错？</title>
+    <url>/2024/06/16/nvm%E4%B8%8B%E8%BD%BD%E6%8A%A5%E9%94%99%EF%BC%9F/</url>
+    <content><![CDATA[<h3 id="问题：-测试node版本对项目影响，在使用nvm下载node时报错："><a href="#问题：-测试node版本对项目影响，在使用nvm下载node时报错：" class="headerlink" title="问题： 测试node版本对项目影响，在使用nvm下载node时报错："></a>问题： 测试node版本对项目影响，在使用nvm下载node时报错：</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">nvm list available时遇到：<span class="title class_">Could</span> not retrieve <span class="attr">https</span>:<span class="comment">//nodejs.org/dist/index.json</span></span><br></pre></td></tr></table></figure>
+
+<p>解决方法：</p>
+<p>找到<code>nvm</code>安装目录</p>
+<p>找到目录下文档<code>settings.txt</code>,添加或修改（下载nvm有时有，有时没有需要自己添加）如下代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="attr">node_mirror</span>: <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/node/</span></span><br><span class="line"><span class="attr">npm_mirror</span>: <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/npm/</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>早上打开VS发现命令npm、nvm、nrm都不能使用？？</title>
+    <url>/2024/06/16/%E6%97%A9%E4%B8%8A%E6%89%93%E5%BC%80VS%E5%8F%91%E7%8E%B0%E5%91%BD%E4%BB%A4npm%E3%80%81nvm%E3%80%81nrm%E9%83%BD%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%9F%EF%BC%9F/</url>
+    <content><![CDATA[<h3 id="问题：早上打开VScode-运行代码时-npm出错"><a href="#问题：早上打开VScode-运行代码时-npm出错" class="headerlink" title="问题：早上打开VScode 运行代码时 npm出错"></a>问题：早上打开VScode 运行代码时 npm出错</h3><p> 明明是重新安装了<code>nvm</code>来控制调整node版本，却发现出错</p>
+<p>开始排查  卸载<code>nvm</code>及<code>node</code> 重新下载后可以使用。</p>
+<p>开始测试  当电脑重启后 启动项目发现还是出错，重新排查</p>
+<p>发现是下载<code>nvm</code>后 环境变量需要调整。下载了多个版本 创建<code>nodejs</code>文件夹固定一个版本位置</p>
+<p>设置变量后 发现可以正常使用</p>
+]]></content>
+      <categories>
+        <category>命令行</category>
+      </categories>
+      <tags>
+        <tag>命令字段</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>click点击事件没报错但不能触发？</title>
+    <url>/2024/06/17/click%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E6%B2%A1%E6%8A%A5%E9%94%99%E4%BD%86%E4%B8%8D%E8%83%BD%E8%A7%A6%E5%8F%91%EF%BC%9F/</url>
+    <content><![CDATA[<h3 id="问题：-在写项目的时候-需要添加一个点击事件，但是发现不能触发"><a href="#问题：-在写项目的时候-需要添加一个点击事件，但是发现不能触发" class="headerlink" title="问题： 在写项目的时候 需要添加一个点击事件，但是发现不能触发"></a>问题： 在写项目的时候 需要添加一个点击事件，但是发现不能触发</h3><p>  开始排查问题 将点击事件代码重写一遍查看后  发现没有报错，点击后不生效</p>
+<p>随后添加鼠标移入变为小手状态代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 鼠标放上有小手指</span><br><span class="line"><span class="attribute">cursor</span>: pointer <span class="meta">!important</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后发现是样式溢出问题</p>
+<p>重新对引入的element-Plus样式做了 穿透样式处理，解决了问题</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">!important</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Vue3</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>Vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>横向布局</title>
+    <url>/2024/06/17/%E6%A8%AA%E5%90%91%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<h4 id="问题-：-写项目时需要横向布局"><a href="#问题-：-写项目时需要横向布局" class="headerlink" title="问题 ： 写项目时需要横向布局"></a>问题 ： 写项目时需要横向布局</h4><p>横向布局代码：</p>
+<p>–父</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow-x</span>: auto; <span class="comment">/* 横向滚动 */</span></span><br></pre></td></tr></table></figure>
+
+<p>– 子</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">display</span>: flex; <span class="comment">/* Flex 布局 */</span></span><br><span class="line"><span class="attribute">white-space</span>: nowrap; <span class="comment">/* 阻止项目换行 */</span></span><br></pre></td></tr></table></figure>
+
+<p>– content</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">flex</span>: <span class="number">0</span> <span class="number">0</span> auto; <span class="comment">/* 每个项目占据自适应宽度 */</span></span><br><span class="line"><span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"><span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#f0f0f0</span>;</span><br><span class="line"><span class="attribute">text-align</span>: center;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
 </search>
